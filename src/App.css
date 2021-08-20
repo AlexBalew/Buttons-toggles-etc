@@ -1,0 +1,8 @@
+.wrapper {
+    padding-left: 50px;
+}
+
+.star {
+    display: flex;
+    gap: 10px;
+}
