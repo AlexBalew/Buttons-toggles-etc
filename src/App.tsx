@@ -3,13 +3,16 @@ import './App.css';
 import PageTitle from "./Components/AppTitle/AppTitle";
 import {OnOff} from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/Accordion/Accordion";
-import {RatingValueType, UncontrolledRating} from "./Components/Rating/Rating";
+import {UncontrolledRating} from "./Components/Rating/Rating";
+import ControlledCheckBox from "./Components/Input/CheckBox";
+import ControlledSelect from "./Components/Input/ControlledSelect";
+
 
 
 //func declaration
 function App() {
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
+    //let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
 
     return (
         <div className='wrapper'>
@@ -36,6 +39,9 @@ function App() {
             <div className='star'>
 
                 <UncontrolledRating/>
+                {/*<ControlledInput />*/}
+                {/*<ControlledCheckBox/>*/}
+                {/*<ControlledSelect />*/}
             </div>
         </div>
     );
