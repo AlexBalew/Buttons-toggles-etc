@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import PageTitle from "./Components/AppTitle/AppTitle";
 import {OnOff} from "./Components/OnOff/OnOff";
@@ -6,6 +6,7 @@ import UncontrolledAccordion from "./Components/Accordion/Accordion";
 import {UncontrolledRating} from "./Components/Rating/Rating";
 import ControlledCheckBox from "./Components/Input/CheckBox";
 import ControlledSelect from "./Components/Input/ControlledSelect";
+import ControlledInput from './Components/Input/Input';
 
 
 
@@ -39,9 +40,9 @@ function App() {
             <div className='star'>
 
                 <UncontrolledRating/>
-                {/*<ControlledInput />*/}
-                {/*<ControlledCheckBox/>*/}
-                {/*<ControlledSelect />*/}
+                <ControlledInput />
+                <ControlledCheckBox/>
+                <ControlledSelect />
             </div>
         </div>
     );
