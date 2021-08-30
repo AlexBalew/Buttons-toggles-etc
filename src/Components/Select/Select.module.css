@@ -1,0 +1,19 @@
+.select span.main {
+    border: 1px solid black;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
+    padding: 4px;
+}
+
+.items {
+    position: absolute;
+    border: 1px solid grey;
+    padding: 5px;
+
+}
+
+.item.selected {
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
