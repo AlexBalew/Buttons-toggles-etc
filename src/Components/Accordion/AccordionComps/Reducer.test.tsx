@@ -1,4 +1,6 @@
-test('Reducer should change value to opposite', ()=>{
+import React from "react";
+
+test.skip('Reducer should change value to opposite', ()=>{
 //data
 
 

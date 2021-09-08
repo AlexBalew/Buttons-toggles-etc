@@ -59,7 +59,7 @@ export function SelectSpan(props: SelectPropsType) {
     }
 
     return (
-        <div>
+        <div className='c'>
             <div className={s.select} onKeyUp={onKeyUp} tabIndex={0}>
                 <span onBlur={viewMode}
                     className={s.main}

@@ -9,15 +9,16 @@ type AccordionPropsType = {
     items: string[]
 }
 
+const AccordionTitleMemo = React.memo(AccordionTitle)
+const AccordionBodyMemo = React.memo(AccordionBody)
 
-
-function UncontrolledAccordion(props: AccordionPropsType) {
+function Accordion(props: AccordionPropsType) {
 
     return <div>
-        <AccordionTitle title={props.titleValue} setCollapsed={props.setCollapsed}
+        <AccordionTitleMemo title={props.titleValue} setCollapsed={props.setCollapsed}
                         collapsed={props.collapsed === false}/>
-        {!props.collapsed && <AccordionBody items={props.items}/>}
+        {!props.collapsed && <AccordionBodyMemo items={props.items}/>}
     </div>
 }
 
-export default UncontrolledAccordion
+export default Accordion
