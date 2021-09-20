@@ -34,3 +34,8 @@ export const ReactMemoUsage = () => {
         <Users users={newArray}/>
     </div>
 }
+
+
+//____________useCallback_________________________
+
+

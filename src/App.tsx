@@ -11,6 +11,7 @@ import {reducer, TOGGLE_CONSTANT} from "./Components/Accordion/AccordionComps/Re
 import {Example} from "./Components/RMemo/ReactMemoExample";
 import Accordion from "./Components/Accordion/Accordion";
 import {ReactMemoUsage} from "./Components/UMemo/UseMemo";
+import {HowToUseUseCallback} from "./Components/UMemo/HowToUseUseCallback";
 
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
                 <br/>
                 <Example />
                 <ReactMemoUsage />
+                <HowToUseUseCallback />
 
             </div>
         </div>
