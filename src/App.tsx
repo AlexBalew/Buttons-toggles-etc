@@ -13,6 +13,7 @@ import Accordion from "./Components/Accordion/Accordion";
 import {ReactMemoUsage} from "./Components/UMemo/UseMemo";
 import {HowToUseUseCallback} from "./Components/UMemo/HowToUseUseCallback";
 import {FuncOne} from "./Components/UState/UState";
+import {FirstExampleOfUseEffect, SetTimeOutExampleOfUseEffect} from "./Components/UEffect/UEffect";
 
 
 function App() {
@@ -86,6 +87,15 @@ function App() {
                 <br/>
                 <br/>
                 <FuncOne/>
+
+                <br/>
+                <br/>
+                <div>useEffect example</div>
+                <FirstExampleOfUseEffect />
+                <br/>
+                <br/>
+                <div>useEffect with setTimeOut example</div>
+                <SetTimeOutExampleOfUseEffect/>
 
 
             </div>
