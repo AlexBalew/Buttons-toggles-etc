@@ -1,13 +1,7 @@
-import React from "react";
-
 type ActionType = {
     type: string
 }
 export const TOGGLE_CONSTANT = 'Toggle-collapsed'
-
-type StateType = {
-    collapsed: boolean
-}
 
 export const reducer = (state: boolean, action: ActionType) => {
 

@@ -12,6 +12,7 @@ import {Example} from "./Components/RMemo/ReactMemoExample";
 import Accordion from "./Components/Accordion/Accordion";
 import {ReactMemoUsage} from "./Components/UMemo/UseMemo";
 import {HowToUseUseCallback} from "./Components/UMemo/HowToUseUseCallback";
+import {FuncOne} from "./Components/UState/UState";
 
 
 function App() {
@@ -39,10 +40,12 @@ function App() {
             <OnOffMemo on={false}/>
 
             <AccordionMemo titleValue={'Photos'}
-                       collapsed={collapsed}
-                       setCollapsed={()=>{dispatch({type: TOGGLE_CONSTANT})}}
-                       items={['Alex', 'Kate', 'Bob']}/>
-                       <br/>
+                           collapsed={collapsed}
+                           setCollapsed={() => {
+                               dispatch({type: TOGGLE_CONSTANT})
+                           }}
+                           items={['Alex', 'Kate', 'Bob']}/>
+            <br/>
 
 
             <h3>Article 1</h3>
@@ -51,7 +54,7 @@ function App() {
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div className='star'>
-                <RatingMemo />
+                <RatingMemo/>
             </div>
             <br/>
 
@@ -59,26 +62,31 @@ function App() {
             <p>Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div className='star'>
-                <RatingMemo />
+                <RatingMemo/>
             </div>
             <p>
-                <InputMemo />
+                <InputMemo/>
                 <CheckboxMemo/>
-                <SelectMemo />
+                <SelectMemo/>
             </p>
 
             <div className='select'>
                 <SelectSpanMemo value={value} onChange={setValue} items={[
                     {value: '1', title: 'Minsk'},
                     {value: '2', title: 'Gomel'},
-                    {value: '3', title: 'Brest'}]} />
+                    {value: '3', title: 'Brest'}]}/>
                 <br/>
                 <br/>
                 <br/>
                 <br/>
-                <Example />
-                <ReactMemoUsage />
-                <HowToUseUseCallback />
+                <Example/>
+                <ReactMemoUsage/>
+                <HowToUseUseCallback/>
+
+                <br/>
+                <br/>
+                <FuncOne/>
+
 
             </div>
         </div>
