@@ -14,6 +14,7 @@ import {ReactMemoUsage} from "./Components/UMemo/UseMemo";
 import {HowToUseUseCallback} from "./Components/UMemo/HowToUseUseCallback";
 import {FuncOne} from "./Components/UState/UState";
 import {FirstExampleOfUseEffect, SetTimeOutExampleOfUseEffect} from "./Components/UEffect/UEffect";
+import { Clock } from './Components/Clock/Clock';
 
 
 function App() {
@@ -96,6 +97,9 @@ function App() {
                 <br/>
                 <div>useEffect with setTimeOut example</div>
                 <SetTimeOutExampleOfUseEffect/>
+                <br/>
+                <br/>
+                <Clock />
 
 
             </div>
