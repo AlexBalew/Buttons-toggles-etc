@@ -1,12 +1,22 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, MouseEvent} from "react";
+import AnalogClock from "./AnalogClock";
+import ModeButton from "./ModeButton";
+import s from './clock.module.css'
+import DigitalClock from "./DigitalClock";
 
-const get2DigitsFunc = (num: number) => num < 10 ? '0' + num : num
 
-type PropsType = {}
+export type PropsType = {}
+
+export type ClockModePropsType = {
+    date: Date
+}
+
+type ModeType = boolean
 
 export const Clock: React.FC<PropsType> = () => {
 
     const [date, setDate] = useState(new Date)
+    const [mode, setMode] = useState<ModeType>(false)
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -16,11 +26,21 @@ export const Clock: React.FC<PropsType> = () => {
         return () => clearInterval(intervalId)
     })
 
-    return <div>
-        <span>{get2DigitsFunc(date.getHours())}</span>
-        :
-        <span>{get2DigitsFunc(date.getMinutes())}</span>
-        :
-        <span>{get2DigitsFunc(date.getSeconds())}</span>
+    const changeMode = (mode: ModeType) => {
+        setMode(!mode)
+    }
+
+    return <div className={s.clockModule}>
+        <div className={s.modeButton}>
+            <ModeButton callback={() => changeMode(mode)}/>
+        </div>
+        <div>
+            {
+                mode ? <AnalogClock date={date}/>
+                    : <DigitalClock date={date}/>
+
+            }
+        </div>
+
     </div>
 }
