@@ -14,7 +14,8 @@ import {ReactMemoUsage} from "./Components/UMemo/UseMemo";
 import {HowToUseUseCallback} from "./Components/UMemo/HowToUseUseCallback";
 import {FuncOne} from "./Components/UState/UState";
 import {FirstExampleOfUseEffect, SetTimeOutExampleOfUseEffect} from "./Components/UEffect/UEffect";
-import { Clock } from './Components/Clock/Clock';
+import {Clock} from './Components/Clock/Clock';
+import {KeysTracker} from "./Components/UEffect/KeysTracker";
 
 
 function App() {
@@ -92,15 +93,18 @@ function App() {
                 <br/>
                 <br/>
                 <div>useEffect example</div>
-                <FirstExampleOfUseEffect />
+                <FirstExampleOfUseEffect/>
                 <br/>
                 <br/>
                 <div>useEffect with setTimeOut example</div>
                 <SetTimeOutExampleOfUseEffect/>
                 <br/>
                 <br/>
-                <Clock />
-
+                <Clock/>
+                <br/>
+                <br/>
+                <br/>
+                <KeysTracker/>
 
             </div>
         </div>

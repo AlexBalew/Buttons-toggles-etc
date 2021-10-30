@@ -71,11 +71,13 @@ export const SetTimeOutExampleOfUseEffect = () => {
             }, 2000)
         }, [])*/
 
-    useEffect(() => {
 
-        setInterval(() => {
+    useEffect(() => {
+        let intervalId = setInterval(() => {
             setTime(new Date())
         }, 1000)
+        console.log(intervalId)
+        return () => clearInterval(intervalId)
     }, [])
 
     const actualTime = time?.toLocaleTimeString()
@@ -92,4 +94,6 @@ export const SetTimeOutExampleOfUseEffect = () => {
         </button>
     </>
 }
+
+
 

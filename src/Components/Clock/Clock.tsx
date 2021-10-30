@@ -24,7 +24,7 @@ export const Clock: React.FC<PropsType> = () => {
         }, 1000)
 
         return () => clearInterval(intervalId)
-    })
+    }, [])
 
     const changeMode = (mode: ModeType) => {
         setMode(!mode)
